@@ -1,0 +1,56 @@
+// colors :
+//  negro : #1e2124
+//  gris 1 : #282b30
+//  gris 2 : #36393e
+//  gris 3 : #424549
+//  primario : #7289da
+//
+
+.navbar-general{
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    background-color: #7289da; 
+    display: flex;
+    justify-content: center;
+    height: 46px;
+}
+
+.navbar-general-all{
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    background-color: #7289da; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 46px;
+    max-width: 1920px;
+}
+
+.name-logo-text{
+    align-self: center;
+    padding-left: 5vw;
+}
+
+.contact-button{
+    padding-right: 5vw;
+}
+
+a{
+    text-decoration: none;
+    &:visited{
+        color: black;
+    }
+}
+
+
+.nav-buttons{
+    margin-left: -40px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    gap: 5vw;
+    text-decoration: none;
+}

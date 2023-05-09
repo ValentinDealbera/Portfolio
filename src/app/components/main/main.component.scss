@@ -1,0 +1,23 @@
+// colors :
+//  negro : #1e2124
+//  gris 1 : #282b30
+//  gris 2 : #36393e
+//  gris 3 : #424549
+//  primario : #7289da
+//
+.main-general{
+    margin-top: 46px;
+    width: 100vw;
+    background-color: #1e2124; 
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.main-general-all{
+    width: 100vw;
+    background-color: #1e2124; 
+    display: flex;
+    min-height: 100vh;
+    max-width: 1920px;
+}

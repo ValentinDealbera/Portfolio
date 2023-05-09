@@ -13,7 +13,8 @@
     background-color: #7289da; 
     display: flex;
     justify-content: center;
-    height: 46px;
+    height: 80px;
+    font-size: x-large;
 }
 
 .navbar-general-all{
@@ -24,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 46px;
+    height: 80px;
     max-width: 1920px;
 }
 
@@ -40,7 +41,7 @@
 a{
     text-decoration: none;
     &:visited{
-        color: black;
+        color: white;
     }
 }
 

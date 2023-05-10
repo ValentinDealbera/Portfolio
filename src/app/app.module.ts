@@ -8,6 +8,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { PhotoCardComponent } from './components/photo-card/photo-card.component';
+import { TechsCardComponent } from './components/techs-card/techs-card.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PhotoCardComponent } from './components/photo-card/photo-card.component
     NavBarComponent,
     FooterComponent,
     MainComponent,
-    PhotoCardComponent
+    PhotoCardComponent,
+    TechsCardComponent
   ],
   imports: [
     BrowserModule,

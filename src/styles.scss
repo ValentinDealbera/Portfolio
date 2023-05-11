@@ -20,4 +20,4 @@ $lg-3: 4.5rem;
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: "Roboto", "Helvetica Neue", sans-serif; font-weight: 700;}
+body {background-color: $color-oscuro-1;color: $font-color-1 ;margin: 0; font-family: "Roboto", "Helvetica Neue", sans-serif; font-weight: 700; margin-left: 10vw; margin-right: 10vw;overflow: hidden;}

@@ -18,7 +18,7 @@ $lg-2: 3.5rem;
 $lg-3: 4.5rem;
 
 .master-div{
-    height: calc(100vh - 90px);
+    height: calc(100vh - ($lg-3 * 1.5));
     width: 80vw;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@ $lg-3: 4.5rem;
 }
 
 .div-general{
-    height: calc(100vh - 90px);
+    height: calc(100vh - ($lg-3 * 1.5));
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -85,9 +85,18 @@ $lg-3: 4.5rem;
 }
 
 .div-foto{
-    width: 40vw;
+    margin-right: -10vw;
+    width: 50vw;
+    max-width: 960px;
+    overflow: hidden;
+    position: relative;
     img{
-        width: 140%;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
 

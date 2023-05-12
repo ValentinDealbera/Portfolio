@@ -19,7 +19,8 @@ $lg-3: 4.5rem;
 
 .navbar-general {
   position: fixed;
-  width: 80vw;
+  width: 100vw;
+  left: 0;
   display: flex;
   justify-content: center;
   background-color: $color-oscuro-1;

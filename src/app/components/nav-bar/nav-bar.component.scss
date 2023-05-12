@@ -20,7 +20,6 @@ $lg-3: 4.5rem;
 .navbar-general {
   position: fixed;
   width: 80vw;
-  height: 90px;
   display: flex;
   justify-content: center;
   background-color: $color-oscuro-1;
@@ -29,7 +28,6 @@ $lg-3: 4.5rem;
 
 .navbar-general-all {
     width: 80vw;
-    min-height: 90px;
     max-width: 1536px;
   display: flex;
   flex-direction: row;
@@ -39,9 +37,9 @@ $lg-3: 4.5rem;
 
 .name-logo,
 .nav-buttons-div {
+  height: calc($lg-3 * 1.5);
   display: flex;
   justify-content: center;
-  min-height: 90px;
   align-items: center;
   gap: 3.5vw;
 }

@@ -37,32 +37,33 @@ $lg-3: 4.5rem;
 }
 
 .hey-there{
-    font-size: 24px;
-    margin-bottom: 40px;
+    font-size: $md-3;
+    margin-bottom: $lg-1;
 }
 
 .im-valentin{
-    font-size: 32px;
-    margin-bottom: 40px;
+    font-size: $lg-1;
+    margin-bottom: $lg-1;
 }
 
 .a-web-developer{
-    margin-bottom: 25px;
-    font-size: 40px;
+    margin-bottom: $md-3;
+    font-size: $lg-1;
+    line-height: $lg-1;
 }
 
 .dealbera{
     display: block;
-    margin-bottom:45px;
+    margin-bottom:$lg-2;
 }
 
 .full-stack{
-    font-size: 48px;
+    font-size: $lg-2;
     font-weight: 700;
 }
 
 .from-argentina{
-    font-size: 40px;
+    font-size: $lg-1;
     margin-bottom: 40px;
 
 }
@@ -70,8 +71,8 @@ $lg-3: 4.5rem;
 
 .valentin,.dealbera{
     font-weight: 900;
-    font-size: 64px;
-    letter-spacing: 10px;
+    font-size: $lg-3;
+    letter-spacing: $sm-2;
     color: $color-primario;
 }
 
@@ -85,7 +86,6 @@ $lg-3: 4.5rem;
 
 .div-foto{
     width: 40vw;
-    // overflow-y: hidden;
     img{
         width: 140%;
     }
@@ -95,10 +95,10 @@ $lg-3: 4.5rem;
     display: flex;
     gap: $lg-2;
     button{
-        width: 200px;
-        height: 75px;
-        border-radius: 30px;
-        font-size: 24px;
+        width: calc($lg-3 * 2.5);
+        height: $lg-3;
+        border-radius: $md-3;
+        font-size: $md-2;
         letter-spacing: 2px;
         font-weight: 500;
         transition: all 0.2s ease-in-out;
@@ -120,4 +120,5 @@ $lg-3: 4.5rem;
 .my-works{
     background-color: $color-oscuro-1;
     border: 1px solid $font-color-1;
+    color: $font-color-1;
 }

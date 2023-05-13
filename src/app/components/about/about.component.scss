@@ -22,7 +22,7 @@ $lg-3: 4.5rem;
      height: calc(100vh - ($lg-3 * 1.5));
      display: flex;
      justify-content: center;
-
+     max-height: 1010px;
 }
 
 .main-frame{
@@ -32,7 +32,6 @@ $lg-3: 4.5rem;
      max-height: 1010px;
      display: flex;
      flex-direction: row;
-
 }
 
 .img-div{
@@ -106,9 +105,4 @@ display: flex;
 
 .data-div{
     font-weight: 900;
-}
-
-
-.data-result-div{
-
 }

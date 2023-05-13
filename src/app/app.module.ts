@@ -8,8 +8,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MainComponent } from './components/main/main.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-
-
+import { SkillsComponent } from './components/skills/skills.component';
+import { SwiperModule } from 'swiper/angular'
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,11 +17,13 @@ import { AboutComponent } from './components/about/about.component';
     MainComponent,
     HomeComponent,
     AboutComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

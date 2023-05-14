@@ -1,0 +1,249 @@
+$color-primario: #fbbf24;
+$color-secundario: #4338ca;
+$color-terciario: #404040;
+$color-oscuro-1: #181818;
+$color-oscuro-2: #262626;
+$color-oscuro-3: #323232;
+$font-color-1: rgba(255, 255, 255, 0.96);
+$font-color-2: rgba(255, 255, 255, 0.67);
+$font-color-3: rgba(255, 255, 255, 0.45);
+$sm-1: 0.375rem;
+$sm-2: 0.625rem;
+$sm-3: 0.875rem;
+$md-1: 1rem;
+$md-2: 1.375rem;
+$md-3: 1.75rem;
+$lg-1: 2.5rem;
+$lg-2: 3.5rem;
+$lg-3: 4.5rem;
+
+.main-div {
+  width: 80vw;
+  height: calc(100vh - ($lg-3 * 1.5));
+  display: flex;
+  max-height: 1320px;
+  justify-content: center;
+  min-height: 1040px;
+}
+
+.main-frame {
+  width: 80vw;
+  height: calc(100vh - ($lg-3 * 1.5));
+  max-width: 1536px;
+  max-height: 1070px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-div {
+  padding-top: calc($lg-3 * 1.5);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: calc($lg-3 * 2.4);
+  p {
+    font-size: $lg-1;
+    position: relative;
+    font-weight: 700;
+  }
+  span {
+    color: $color-primario;
+    font-weight: 900;
+    font-size: $lg-2;
+  }
+  margin-bottom: calc($lg-3 * 2);
+}
+
+.main-text {
+  :before {
+    content: "Projects";
+    position: absolute;
+    color: $font-color-3;
+    top: calc($md-3);
+    font-size: calc($lg-3 * 1.2);
+    left: -8px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.skills-div {
+  width: 100%;
+  max-width: 1536px;
+  height: fit-content;
+  // max-height: 750px;
+  background-color: $color-oscuro-2;
+  border-radius: $md-3;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  button {
+    background-color: $color-oscuro-3;
+    border: 1px solid $color-oscuro-3;
+    color: $color-terciario;
+    z-index: 30;
+    &:hover {
+      background-color: #404040b4;
+    }
+  }
+}
+
+.button-left {
+  border-radius: 30px 0px 0px 30px;
+}
+
+.button-right {
+  border-radius: 0px 30px 30px 0px;
+}
+
+.carrousel-div {
+  width: 80vw;
+}
+
+.grid-slot {
+  display: flex;
+  flex-direction: column;
+  gap: $md-2;
+}
+
+.row2 {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+}
+
+.row1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.description {
+  font-size: $md-3;
+  line-height: $lg-1;
+}
+
+.in-right {
+  animation: appear-right 0.5s forwards;
+}
+
+.div1 {
+  position: relative;
+  width: 45vw;
+  height: 35vh;
+  max-width: 952px;
+  max-height: 360px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  p {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  &:hover {
+    p, p:visited {
+      padding:  0 $md-3;
+      text-decoration: none;
+      color: #181818;
+      font-size: $lg-2;
+      font-weight: 900;
+      line-height: $lg-1;
+      display: flex;
+      letter-spacing: $sm-1;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(251, 191, 36, 0.60);
+      backdrop-filter: blur(5px);
+    }
+  }
+}
+.div2 {
+  position: relative;
+  max-width: 952px;
+  width: 45vw;
+  height: 35vh;
+  max-height: 360px;
+  overflow: hidden;
+  p {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  &:hover {
+    p, p:visited {
+      padding:  0 $md-3;
+      text-decoration: none;
+      color: #181818;
+      font-size: $md-3;
+      font-weight: 500;
+      line-height: $lg-1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(251, 191, 36, 0.60);
+      backdrop-filter: blur(5px);
+    }
+  }
+}
+.div3 {
+  width: 30vw;
+  height: 35vh;
+  max-width: 482px;
+  max-height: 349px;
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.div4 {
+  width: 30vw;
+  height: 35vh;
+  max-width: 482px;
+  max-height: 349px;
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.div1,
+.div2,
+.div3,
+.div4 {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes appear-right {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,35 @@
+<div class="main-div">
+    <div class="main-frame">
+       <div class="text-div">
+        <p class="main-text">My <span>Projects</span></p>
+        <p>Every <span>Experience</span> in the tech world has a <span>Voice</span> and something to <span>Say</span></p>
+       </div>
+       <div class="skills-div">
+        <button (click)="setPage('-')" class="button-left">◄</button>
+        <div class="carrousel-div">
+                <div class="grid-slot in-right" *ngFor="let project of showSkills" >
+                    <div class="row1">
+                   <div class="div1">
+                    <a [href]="project.link"><img [src]="project.img1" alt="img 1">
+                    <p class="hover" >{{project.name}}</p></a>
+                   </div>
+                   
+                   <div class="div4">
+                    <img [src]="project.img4" alt="img 4">
+                </div>
+                </div>
+                <div class="row2">
+                    <div class="div3">
+                     <img [src]="project.img3" alt="img 3">
+                    </div>
+                    <div class="div2">
+                        <a [href]="project.link"><img [src]="project.img2" alt="img 2">
+                        <p class="hover">{{project.description}}</p></a>
+                       </div>
+            </div>
+            </div>
+        </div>
+        <button (click)="setPage('+')" class="button-right">►</button>
+       </div>
+    </div>
+</div>

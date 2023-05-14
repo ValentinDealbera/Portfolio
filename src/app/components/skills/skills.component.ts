@@ -96,7 +96,6 @@ export class SkillsComponent {
   ngOnInit() {
     this.startInterval();
   }
-
   startInterval() {
     setInterval(() => {
       this.setPage('+');

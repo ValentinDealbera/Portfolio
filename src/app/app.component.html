@@ -1,8 +1,31 @@
-<app-nav-bar />
-  <app-main>
-    <app-home/>
-    <app-about/>
-    <app-skills/>
-    <app-projects/>
-    <app-contact/>
-</app-main>
+<div class="navbar-general">
+  <div class="navbar-general-all">
+    <div class="name-logo">
+      <span class="name-logo-text">Valentin Dealbera</span>
+    </div>
+    <div class="nav-buttons-div">
+      <span class="nav-buttons-text" (click)="scrollToHome()">Home</span>
+      <span class="nav-buttons-text" (click)="scrollToAbout()">About me</span>
+      <span class="nav-buttons-text" (click)="scrollToSkills()">Skills</span>
+      <span class="nav-buttons-text" (click)="scrollToProjects()"
+        >Projects</span
+      >
+      <span class="nav-buttons-text" (click)="scrollToContact()">Contact</span>
+    </div>
+  </div>
+</div>
+<div #home>
+  <app-home></app-home>
+</div>
+<div #about>
+  <app-about></app-about>
+</div>
+<div #skills>
+  <app-skills></app-skills>
+</div>
+<div #projects>
+  <app-projects></app-projects>
+</div>
+<div #contact>
+  <app-contact></app-contact>
+</div>

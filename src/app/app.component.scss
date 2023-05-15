@@ -16,3 +16,78 @@ $md-3: 1.75rem;
 $lg-1: 2.5rem;
 $lg-2: 3.5rem;
 $lg-3: 4.5rem;
+
+.main-general{
+    max-width: 1536px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-general {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: $color-oscuro-1;
+  z-index: 50;
+}
+
+.navbar-general-all {
+    width: 80vw;
+    max-width: 1536px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name-logo,
+.nav-buttons-div {
+  height: calc($lg-3 * 1.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5vw;
+}
+
+.name-logo{
+    font-size: $lg-1;
+    font-weight: 900;
+    &:hover{
+        cursor: pointer;
+      }
+}
+
+
+
+.nav-buttons-text {
+  font-size: $md-3;
+
+    position: relative;
+  display: inline-block;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: $color-primario; // Change color as desired
+    transition: width 0.2s ease-in-out;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after {
+    width: 110%;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+    .nav-buttons-div{
+        gap: 67.5px;
+    }
+    }

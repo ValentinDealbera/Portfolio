@@ -5,12 +5,12 @@
       <p>Wanna <span>reach</span> to me? Let's <span>connect</span>!</p>
       <div class="bubbles">
       <div *ngFor="let contact of contacts" class="contact-bubbles-div">
+        <a [href]="contact.link" target="_blank">
         <div class="contact-bubble">
-            <a [href]="contact.link" target="_blank">
                 <img [src]="contact.img" [alt]="contact.name" />
                 <p>{{contact.text}}</p>
+              </div>
             </a>
-        </div>
       </div>
     </div>
     </div>

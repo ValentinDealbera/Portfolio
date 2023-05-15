@@ -87,6 +87,7 @@ $lg-3: 4.5rem;
     position: relative;
     height: $lg-3 * 4;
     width: $lg-3 * 4;
+    transition: all 0.2s ease-in-out;
     p, p:visited{
         width: $lg-3 * 8;
         position: absolute;
@@ -95,7 +96,7 @@ $lg-3: 4.5rem;
         transform: translate(-50%, -0%);
         display: flex;
         justify-content: center;
-        font-size: $lg-1;
+        font-size: $md-3;
         font-weight: 500;
         color: $font-color-1;
         text-decoration: none;
@@ -107,5 +108,13 @@ $lg-3: 4.5rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    &:hover{
+        transform: scale(1.1) translateY(-5px);
+        box-shadow: 0px 15px 15px #101010;
+    }
+    &:active{
+        transform: scale(1.05) translateY(-5px);
+        box-shadow: 0px 7.5px 7.5px #101010;
     }
 }

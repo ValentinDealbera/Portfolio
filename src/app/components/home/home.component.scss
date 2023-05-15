@@ -18,7 +18,8 @@ $lg-2: 3.5rem;
 $lg-3: 4.5rem;
 
 .master-div{
-    height: calc(100vh - ($lg-3 * 1.5));
+    padding-top: calc($lg-3 * 1.5);
+    height: calc(100vh);
     width: 80vw;
   display: flex;
   justify-content: center;
@@ -27,7 +28,7 @@ $lg-3: 4.5rem;
 }
 
 .div-general{
-    height: calc(100vh - ($lg-3 * 1.5));
+    height: calc(100vh);
     display: flex;
     flex-direction: row;
     align-content: center;

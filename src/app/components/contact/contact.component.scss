@@ -55,14 +55,14 @@ $lg-3: 4.5rem;
 }
 
 .main-text {
-  text-shadow: 5px 5px 10px $color-oscuro-1;
+    text-shadow: 5px 5px 10px $color-oscuro-1;
   :before {
-    content: "Tech";
+    content: "Contact";
     position: absolute;
     color: $font-color-3;
-    top: calc($lg-1 + $md-1);
-    font-size: calc($lg-3 * 2.35);
-    left: 0;
+    top: calc($lg-1);
+    font-size: calc($lg-3 * 1.5);
+    left: -$sm-3;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -70,81 +70,42 @@ $lg-3: 4.5rem;
   }
 }
 
-.skills-div {
-  width: 80vw;
-  max-width: 1536px;
-  height: 50vh;
-  max-height: 350px;
-  background-color: $color-oscuro-2;
-  border-radius: $md-3;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  button {
-    background-color: $color-oscuro-3;
-    border: 1px solid $color-oscuro-3;
-    color: $color-terciario;
-    z-index: 30;
-    &:hover {
-      background-color: #404040b4;
-    }
-  }
-}
-
-.button-left {
-  border-radius: 30px 0px 0px 30px;
-}
-
-.button-right {
-  border-radius: 0px 30px 30px 0px;
-}
-
-.carrousel-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: $lg-1;
-}
-
-.grid-slot{
-  width: 100%;
-  padding: $lg-2;
-}
-
-.description{
-  font-size: $md-3;
-  line-height: $lg-1;
-}
-
-.grid-img{
-  height: 100px;
-}
-
-.grid-slot-div{
-  p{
+.bubbles{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    font-size: $lg-1;
-    letter-spacing: 0.1rem;
-    gap: $md-2;
-    font-weight: 700;
-  }
+    width: 80vw;
+    justify-content: space-around;
 }
 
-
-
-.in-right{
-  animation: appear-right 0.5s forwards;
+.contact-bubbles-div{
+  position: relative;
 }
 
-@keyframes appear-right {
-  0% {
-    opacity: 0;
-    transform: scale(.8);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+.contact-bubble{
+    background-color: $color-primario;
+    border-radius: 999999px;
+    position: relative;
+    height: $lg-3 * 4;
+    width: $lg-3 * 4;
+    p, p:visited{
+        width: $lg-3 * 8;
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%, -0%);
+        display: flex;
+        justify-content: center;
+        font-size: $lg-1;
+        font-weight: 500;
+        color: $font-color-1;
+        text-decoration: none;
+    }
+    img{
+        height: $lg-3 * 1.5;
+    width: $lg-3 * 1.5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

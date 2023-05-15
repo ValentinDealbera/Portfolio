@@ -10,7 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { SwiperModule } from 'swiper/angular';
-import { ProjectsComponent } from './components/projects/projects.component'
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ContactComponent } from './components/contact/contact.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { ProjectsComponent } from './components/projects/projects.component'
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

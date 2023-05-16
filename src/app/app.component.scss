@@ -24,6 +24,10 @@ $lg-3: 4.5rem;
 }
 
 .navbar-general {
+  display: none;
+}
+
+.navbar-responsive {
   position: fixed;
   width: 100vw;
   left: 0;
@@ -33,18 +37,44 @@ $lg-3: 4.5rem;
   z-index: 50;
 }
 
+
+
 .navbar-general-all {
-    width: 80vw;
-    max-width: 1536px;
+    width: 95vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.name-logo,
-.nav-buttons-div {
-  height: calc($lg-3 * 1.5);
+.responsive-nav{
+  position: fixed;
+  height: calc($lg-3 * 1.25);
+  position: relative;
+  img{
+    height: 100%;
+  }
+}
+
+.nav-buttons-div{
+  position: absolute;
+  left: -$lg-3 * 2;
+  top: $lg-3;
+  background-color: $color-oscuro-1;
+  border-radius: $md-3;
+  padding: $md-2;
+  display: flex;
+  flex-direction: column;
+  width: $lg-3 * 3;
+  gap: $lg-1;
+  span{
+    font-size: $lg-1;
+    font-weight: 700;
+  }
+}
+
+.name-logo {
+  height: calc($lg-3 * 1.25);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,3 +121,80 @@ $lg-3: 4.5rem;
         gap: 67.5px;
     }
     }
+
+@media screen and (min-width: 1024px) {
+  .navbar-responsive {
+    display: none;
+}
+  .navbar-general{
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: $color-oscuro-1;
+    z-index: 50;
+  }
+  .navbar-general-all {
+    width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name-logo,
+.nav-buttons-div {
+  height: calc($lg-3 * 1.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5vw;
+  position: static;
+}
+
+.name-logo{
+    font-size: $lg-1;
+    font-weight: 900;
+    &:hover{
+        cursor: pointer;
+      }
+}
+
+
+
+.nav-buttons-text {
+  font-size: $md-3;
+
+    position: relative;
+  display: inline-block;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background-color: $color-primario; // Change color as desired
+    transition: width 0.2s ease-in-out;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after {
+    width: 110%;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
+}
+
+@keyframes dropdown {
+0%{
+  transform: scale(0);
+}
+100%{
+  transform: scale(1);
+}
+  
+}

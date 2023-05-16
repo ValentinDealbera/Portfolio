@@ -23,7 +23,7 @@ $lg-3: 4.5rem;
   display: flex;
   max-height: 1320px;
   justify-content: center;
-  min-height: 1040px;
+  min-height: clamp(45.313rem, 10.563rem + 115.833vw, 88.75rem);
 }
 
 .main-frame {
@@ -250,15 +250,3 @@ $lg-3: 4.5rem;
     transform: scale(1);
   }
 }
-
-@media (min-width: 1280px) { 
-  .main-div {
-    min-height: 1080px;
-  }
-}
-
-@media (max-width: 1366px) { 
-  .main-div {
-    min-height: 800px;
-  }
- }

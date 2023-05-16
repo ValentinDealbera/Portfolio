@@ -20,4 +20,13 @@ $lg-3: 4.5rem;
 
 
 html, body { height: 100%; font-size: 0.625rem;}
-body {background-color: $color-oscuro-1;color: $font-color-1 ;margin: 0; font-family: "Roboto", "Helvetica Neue", sans-serif; font-weight: 700; margin-left: 10vw; margin-right: 10vw;overflow-x: hidden;}
+body {background-color: $color-oscuro-1;color: $font-color-1 ;margin: 0; font-family: "Roboto", "Helvetica Neue", sans-serif; font-weight: 700; overflow-x: hidden;}
+
+@media (min-width: 	1536px) {
+html, body { height: 100%; font-size: 0.875rem;}
+
+}
+
+@media (min-width: 	1024px) {
+    body {background-color: $color-oscuro-1;color: $font-color-1 ;margin: 0; font-family: "Roboto", "Helvetica Neue", sans-serif; font-weight: 700; margin-left: 10vw; margin-right: 10vw;overflow-x: hidden;}
+    }

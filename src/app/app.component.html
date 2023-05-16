@@ -1,7 +1,7 @@
 <div class="navbar-general">
   <div class="navbar-general-all">
     <div class="name-logo">
-      <span class="name-logo-text">Valentin Dealbera</span>
+      <span class="name-logo-text" (click)="scrollToHome()" >Valentin Dealbera</span>
     </div>
     <div class="nav-buttons-div">
       <span class="nav-buttons-text" (click)="scrollToHome()">Home</span>
@@ -14,8 +14,27 @@
     </div>
   </div>
 </div>
+<div class="navbar-responsive">
+  <div class="navbar-general-all">
+    <div class="name-logo">
+      <span class="name-logo-text" (click)="scrollToHome()" >Valentin Dealbera</span>
+    </div>
+    <div class="responsive-nav">
+      <img src="/assets/picklist-type-svgrepo-com.svg" alt="" (click)="setDropDown()"/>
+    <div *ngIf="dropdown" class="nav-buttons-div">
+      <span class="nav-buttons-text" (click)="scrollToHome()">Home</span>
+      <span class="nav-buttons-text" (click)="scrollToAbout()">About me</span>
+      <span class="nav-buttons-text" (click)="scrollToSkills()">Skills</span>
+      <span class="nav-buttons-text" (click)="scrollToProjects()"
+        >Projects</span
+      >
+      <span class="nav-buttons-text" (click)="scrollToContact()">Contact</span>
+    </div>
+  </div>
+  </div>
+</div>
 <div #home>
-  <app-home></app-home>
+  <app-home (HireMe)="scrollToContact()" (MyWorks)="scrollToProjects()"></app-home>
 </div>
 <div #about>
   <app-about></app-about>

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Skills } from '../schemas/skills';
 
 @Component({
@@ -6,7 +6,21 @@ import { Skills } from '../schemas/skills';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit {
+   skillsToShow: Number = 2
+  ngOnInit() {
+    this.getScreenWidth();
+    this.startInterval();
+    this.skillsToShow = Number(this.screenWidth) > 1024 ? 2 : 1;
+    this.setPage('+')
+    this.setPage('-')
+  }
+  screenWidth!: number;
+  @HostListener('window:resize', ['$event'])
+  getScreenWidth(event?: any) {
+    this.screenWidth = window.innerWidth;
+    // You can use this.screenWidth in your component to conditionally apply styles or perform other actions based on the screen width
+  }
   @ViewChild('description') description: ElementRef | undefined;
   skills: Skills[] = [
     {
@@ -71,7 +85,7 @@ export class SkillsComponent {
     },
   ]
   page: Number = 1
-  skillsToShow: Number = 2
+  
   totalPages: Number = Math.ceil(this.skills.length / Number(this.skillsToShow))
   showSkills: Skills[] = this.skills.slice((Number(this.page) - 1), Number(this.skillsToShow))
   setPage(todo: string) {
@@ -93,10 +107,10 @@ export class SkillsComponent {
       Number(this.page) * Number(this.skillsToShow)
     );
   }
-  ngOnInit() {
-    this.startInterval();
-  }
+ 
   startInterval() {
+    console.log(this.screenWidth);
+    
     setInterval(() => {
       this.setPage('+');
     }, 7500);

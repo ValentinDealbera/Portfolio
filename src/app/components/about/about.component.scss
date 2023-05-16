@@ -1,7 +1,7 @@
 $color-primario: #fbbf24;
 $color-secundario: #4338ca;
 $color-terciario: #404040;
-$color-oscuro-1: #181818;
+$color-oscuro-1: #050505;
 $color-oscuro-2: #262626;
 $color-oscuro-3: #323232;
 $font-color-1: rgba(255, 255, 255, 0.96);
@@ -63,12 +63,8 @@ $lg-3: 4.5rem;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    background-color: #32323280;
-    padding-left: 100vw;
-    padding-right: 100vw;
-    padding-top: $lg-3;
-    padding-bottom: $lg-3;
     text-align: start;
+    gap: 5px;
 }
 
 .about-div{
@@ -166,7 +162,6 @@ display: flex;
     top: 0%;
     left: 0%;
     transform: translate(-0%, -0%);
-    background-color: #32323200;
     padding-left: 0vw;
     padding-right: 0vw;
     padding-top: 0;

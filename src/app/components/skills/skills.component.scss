@@ -1,7 +1,7 @@
 $color-primario: #fbbf24;
 $color-secundario: #4338ca;
 $color-terciario: #404040;
-$color-oscuro-1: #181818;
+$color-oscuro-1: #050505;
 $color-oscuro-2: #262626;
 $color-oscuro-3: #323232;
 $font-color-1: rgba(255, 255, 255, 0.96);
@@ -18,16 +18,15 @@ $lg-2: 3.5rem;
 $lg-3: 4.5rem;
 
 .main-div {
-  width: 80vw;
-  min-height: clamp(36.25rem, 11.25rem + 83.333vw, 67.5rem);
-  height: calc(100vh - ($lg-3 * 1.5));
+  width: 100vw;
+  height: calc(100vh - $lg-3 * 1.5 );
   display: flex;
   max-height: 1010px;
   justify-content: center;
 }
 
 .main-frame {
-  width: 80vw;
+  width: 100vw;
   height: calc(100vh - ($lg-3 * 1.5));
   max-width: 1536px;
   max-height: 1010px;
@@ -38,20 +37,25 @@ $lg-3: 4.5rem;
 .text-div {
   padding-top: calc($lg-3 * 1.5);
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: calc($lg-3 * 2.4);
+  gap: calc($lg-3 * 1.5);
+  text-align: center;
+  padding-left: $sm-3;
+  padding-right: $sm-3;
   p {
-    font-size: $lg-2;
+    font-size: $lg-1;
     position: relative;
     font-weight: 700;
+    line-height: $lg-2;
   }
   span {
     color: $color-primario;
     font-weight: 900;
-    font-size: $lg-3;
+    font-size: calc($lg-1 + 5px);
   }
-  margin-bottom: calc($lg-3 * 2);
+  margin-bottom: calc($lg-3);
 }
 
 .main-text {
@@ -60,8 +64,8 @@ $lg-3: 4.5rem;
     content: "Tech";
     position: absolute;
     color: $font-color-3;
-    top: calc($lg-1 + $md-1);
-    font-size: calc($lg-3 * 2.35);
+    top: calc($lg-1 * 1.1);
+    font-size: calc($lg-3 * 1.75);
     left: 0;
     width: 100%;
     height: 100%;
@@ -71,9 +75,8 @@ $lg-3: 4.5rem;
 }
 
 .skills-div {
-  width: 80vw;
+  width: 100vw;
   max-width: 1536px;
-  height: 50vh;
   max-height: 350px;
   background-color: $color-oscuro-2;
   border-radius: $md-3;
@@ -136,6 +139,129 @@ $lg-3: 4.5rem;
 
 .in-right{
   animation: appear-right 0.5s forwards;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-div {
+    width: 80vw;
+    min-height: clamp(35.25rem, 11.25rem + 83.333vw, 67.5rem);
+    height: calc(100vh - ($lg-3 * 1.5));
+    display: flex;
+    max-height: 1010px;
+    justify-content: center;
+  }
+  
+  .main-frame {
+    width: 80vw;
+    height: calc(100vh - ($lg-3 * 1.5));
+    max-width: 1536px;
+    max-height: 1010px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text-div {
+    padding-top: calc($lg-3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: calc($lg-3 * 2.4);
+    p {
+      font-size: $lg-2;
+      position: relative;
+      font-weight: 700;
+    }
+    span {
+      color: $color-primario;
+      font-weight: 900;
+      font-size: $lg-3;
+    }
+    margin-bottom: calc($lg-3 * 2);
+  }
+  
+  .main-text {
+    text-shadow: 5px 5px 10px $color-oscuro-1;
+    :before {
+      content: "Tech";
+      position: absolute;
+      color: $font-color-3;
+      top: calc($lg-1 + $md-1);
+      font-size: calc($lg-3 * 2.35);
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      text-shadow: none;
+    }
+  }
+  
+  .skills-div {
+    width: 80vw;
+    max-width: 1536px;
+    height: 50vh;
+    max-height: 350px;
+    background-color: $color-oscuro-2;
+    border-radius: $md-3;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    button {
+      background-color: $color-oscuro-3;
+      border: 1px solid $color-oscuro-3;
+      color: $color-terciario;
+      z-index: 30;
+      &:hover {
+        background-color: #404040b4;
+      }
+    }
+  }
+  
+  .button-left {
+    border-radius: 30px 0px 0px 30px;
+  }
+  
+  .button-right {
+    border-radius: 0px 30px 30px 0px;
+  }
+  
+  .carrousel-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $lg-1;
+  }
+  
+  .grid-slot{
+    width: 100%;
+    padding: $lg-2;
+  }
+  
+  .description{
+    font-size: $md-3;
+    line-height: $lg-1;
+  }
+  
+  .grid-img{
+    height: 100px;
+  }
+  
+  .grid-slot-div{
+    p{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: $lg-1;
+      letter-spacing: 0.1rem;
+      gap: $md-2;
+      font-weight: 700;
+    }
+  }
+  
+  
+  
+  .in-right{
+    animation: appear-right 0.5s forwards;
+  }
 }
 
 @keyframes appear-right {

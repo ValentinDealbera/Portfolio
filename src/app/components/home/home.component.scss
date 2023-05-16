@@ -1,7 +1,7 @@
 $color-primario: #fbbf24;
 $color-secundario: #4338ca;
 $color-terciario: #404040;
-$color-oscuro-1: #181818;
+$color-oscuro-1: #050505;
 $color-oscuro-2: #262626;
 $color-oscuro-3: #323232;
 $font-color-1: rgba(255, 255, 255, 0.96);
@@ -86,7 +86,6 @@ $lg-3: 4.5rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #32323280;
     padding-left: 100vw;
     padding-right: 100vw;
     padding-top: $lg-3;
@@ -111,6 +110,7 @@ $lg-3: 4.5rem;
         position: absolute;
         top: 0;
         right: 0;
+        filter: saturate(0%);
     }
 }
 
@@ -142,7 +142,7 @@ $lg-3: 4.5rem;
 }
 
 .my-works{
-    background-color: $color-oscuro-1;
+    background-color: #32323200;
     border: 1px solid $font-color-1;
     color: $font-color-1;
 }
@@ -277,5 +277,19 @@ $lg-3: 4.5rem;
         background-color: $color-oscuro-1;
         border: 1px solid $font-color-1;
         color: $font-color-1;
+    }
+}
+
+@keyframes xd {
+    0%{
+        filter: contrast(0);
+    }
+
+    50%{
+        filter: contrast(10);
+    }
+
+    100%{
+        filter: contrast(0);
     }
 }

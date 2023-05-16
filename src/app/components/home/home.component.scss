@@ -34,7 +34,6 @@ $lg-3: 4.5rem;
     align-content: center;
     max-width: 1536px;
     max-height: 1010px;
-
 }
 
 .hey-there{
@@ -80,17 +79,31 @@ $lg-3: 4.5rem;
 
 
 .div-text{
+    position: absolute;
     display: flex;
-    width: 40vw;
     align-items: center;
+    z-index: 21;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #32323280;
+    padding-left: 100vw;
+    padding-right: 100vw;
+    padding-top: $lg-3;
+    padding-bottom: $lg-3;
+    text-align: center;
+    &-block{
+        width: 100vw;
+    }
 }
 
 .div-foto{
-    margin-right: -10vw;
-    width: 50vw;
+    margin-right: -20vw;
+    width: 100vw;
     max-width: 960px;
     overflow: hidden;
     position: relative;
+    z-index: 20;
     img{
         object-fit: cover;
         height: 100%;
@@ -103,6 +116,7 @@ $lg-3: 4.5rem;
 
 .button-div{
     display: flex;
+    justify-content: center;
     gap: $lg-2;
     button{
         width: calc($lg-3 * 2.5);
@@ -131,4 +145,137 @@ $lg-3: 4.5rem;
     background-color: $color-oscuro-1;
     border: 1px solid $font-color-1;
     color: $font-color-1;
+}
+
+@media screen and (min-width: 1024px) {
+    .master-div{
+        padding-top: calc($lg-3 * 1.5);
+        height: calc(100vh);
+        width: 80vw;
+      display: flex;
+      justify-content: center;
+        max-height: 1010px;
+        background-color: $color-oscuro-1;
+    }
+    
+    .div-general{
+        height: calc(100vh);
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        max-width: 1536px;
+        max-height: 1010px;
+    
+    }
+    
+    .hey-there{
+        font-size: $md-3;
+        margin-bottom: $lg-1;
+    }
+    
+    .im-valentin{
+        font-size: $lg-1;
+        margin-bottom: $lg-1;
+    }
+    
+    .a-web-developer{
+        margin-bottom: $md-3;
+        font-size: $lg-1;
+        line-height: $lg-1;
+    }
+    
+    .dealbera{
+        display: block;
+        margin-bottom:$lg-2;
+    }
+    
+    .full-stack{
+        font-size: $lg-2;
+        font-weight: 700;
+    }
+    
+    .from-argentina{
+        font-size: $lg-1;
+        margin-bottom: 40px;
+    
+    }
+    
+    
+    .valentin,.dealbera{
+        font-weight: 900;
+        font-size: $lg-3;
+        letter-spacing: $sm-2;
+        color: $color-primario;
+    }
+    
+    
+    
+    .div-text{
+    z-index: 21;
+    top: 0%;
+    left: 0%;
+    transform: translate(-0%, -0%);
+    background-color: #32323200;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+        position: static;
+        display: flex;
+        width: 40vw;
+        align-items: center;
+        text-align: start;
+    &-block{
+        width: 100vw;
+    }
+    }
+    
+    .div-foto{
+        margin-right: -10vw;
+        width: 50vw;
+        max-width: 960px;
+        overflow: hidden;
+        position: relative;
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    
+    .button-div{
+        display: flex;
+        justify-content: flex-start;
+        gap: $lg-2;
+        button{
+            width: calc($lg-3 * 2.5);
+            height: $lg-3;
+            border-radius: $md-3;
+            font-size: $md-2;
+            letter-spacing: 2px;
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.25), 0 4px 6px -4px rgb(0 0 0 / 0.25);
+            &:hover{
+                transform: translateY(-2.5px) scale(1.1);
+                cursor: pointer;
+                box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+            }
+        }
+    }
+    
+    .hire-me{
+        background-color: $color-primario;
+        border: 1px solid $color-primario;
+    
+    }
+    
+    .my-works{
+        background-color: $color-oscuro-1;
+        border: 1px solid $font-color-1;
+        color: $font-color-1;
+    }
 }

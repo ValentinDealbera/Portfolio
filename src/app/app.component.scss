@@ -153,6 +153,20 @@ $lg-3: 4.5rem;
   position: static;
 }
 
+.nav-buttons-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 50vw;
+  padding: 0px;
+  gap: $lg-1 * 2.1;
+  span{
+    font-size: $md-3;
+   font-weight: 400;
+
+  }
+}
+
 .name-logo{
     font-size: $lg-1;
     font-weight: 900;

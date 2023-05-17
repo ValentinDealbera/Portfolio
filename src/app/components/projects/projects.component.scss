@@ -55,13 +55,10 @@ $lg-3: 4.5rem;
     content: "Projects";
     position: absolute;
     color: $font-color-3;
-    top: calc($md-3);
-    font-size: calc($lg-2);
+    top: $md-3;
+    font-size: $lg-2;
     left: -3px;
-    width: 100%;
-    height: 100%;
     z-index: -1;
-    text-shadow: none;
   }
 }
 
@@ -129,7 +126,8 @@ $lg-3: 4.5rem;
   position: relative;
   width: 100vw;
   height: 25vh;
-  img {
+    overflow: hidden;
+    img {
     width: 100%;
     object-fit: cover;
     position: absolute;
@@ -167,7 +165,7 @@ $lg-3: 4.5rem;
   overflow: hidden;
   position: relative;
   img {
-    width: 100%;
+    width: 100vw;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -200,14 +198,17 @@ $lg-3: 4.5rem;
 .div3 {
   position: absolute;
 visibility: hidden;
-top: 0;
-left: 0;
+img{
+  height: 1px;
+}
 
 }
 .div4 {
   position: absolute;
 visibility: hidden;
-
+img{
+  height: 1px;
+}
 }
 
 .div1,
@@ -266,7 +267,6 @@ visibility: hidden;
     height: 35vh;
     max-width: 952px;
     max-height: 360px;
-    overflow: hidden;
     &:hover {
       p, p:visited {
         padding:  0 $md-3;

@@ -134,7 +134,7 @@ $lg-3: 4.5rem;
     top: 0;
     left: 0;
   }
-  p {
+  p, a {
     display: none;
     position: absolute;
     top: 0;
@@ -160,7 +160,6 @@ $lg-3: 4.5rem;
 .div2 {
   width: 100vw;
   height: 20vh;
-  max-height: 360px;
   overflow: hidden;
   position: relative;
   img {
@@ -170,7 +169,7 @@ $lg-3: 4.5rem;
     top: 0;
     left: 0;
   }
-  p {
+  p, a {
     display: none;
     position: absolute;
     height: 100%;

@@ -135,6 +135,21 @@ $lg-3: 4.5rem;
   position: relative;
   width: 100vw;
   height: 25vh;
+  img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  p {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
   &.active p,
   .div1:hover p,
   .div1.active p{
@@ -156,6 +171,22 @@ $lg-3: 4.5rem;
   height: 20vh;
   max-height: 360px;
   overflow: hidden;
+  position: relative;
+  img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  p {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
   &.active p,
   .div2:hover p,
   .div2.active p{
@@ -174,6 +205,8 @@ $lg-3: 4.5rem;
 .div3 {
   position: absolute;
 visibility: hidden;
+top: 0;
+left: 0;
 
 }
 .div4 {
@@ -240,22 +273,6 @@ visibility: hidden;
     max-width: 952px;
     max-height: 360px;
     overflow: hidden;
-  
-    img {
-      width: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    p {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-    }
     &:hover {
       p, p:visited {
         padding:  0 $md-3;

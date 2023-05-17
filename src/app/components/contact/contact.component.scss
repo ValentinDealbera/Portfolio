@@ -40,6 +40,7 @@ $lg-3: 4.5rem;
   justify-content: center;
   gap: calc($lg-3 * 2.4);
   text-align: center;
+  padding-top: 70vh;
   p {
     font-size: $lg-1;
     position: relative;
@@ -144,7 +145,8 @@ $lg-3: 4.5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: calc($lg-3 * 2.4);
+  padding-top: 00vh;
+  gap: calc($lg-3 * 2.4);
     p {
       font-size: $lg-2;
       position: relative;

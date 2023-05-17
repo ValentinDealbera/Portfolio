@@ -143,8 +143,7 @@ $lg-3: 4.5rem;
     width: 100%;
   }
   &.active p,
-  .div1:hover p,
-  .div1.active p{
+  .div1.active p, a, a:visited{
       text-decoration: none;
       color: #050505;
       font-size: $lg-2;
@@ -180,8 +179,7 @@ $lg-3: 4.5rem;
     left: 0;
   }
   &.active p,
-  .div2:hover p,
-  .div2.active p{
+  .div2.active p, a, a:visited{
       text-decoration: none;
       color: #050505;
       font-size: $md-2;

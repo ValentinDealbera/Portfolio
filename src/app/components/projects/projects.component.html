@@ -9,9 +9,13 @@
         <div class="carrousel-div">
                 <div class="grid-slot in-right" *ngFor="let project of showSkills" >
                     <div class="row1">
-                   <div class="div1">
-                    <a [href]="project.link"><img [src]="project.img1" alt="img 1">
-                    <p class="hover" >{{project.name}}</p></a>
+                   <div *ngIf="screenWidth < 1024" (click)="toggleActive1()" [class.active]="activeDiv1" class="div1">
+                    <img [src]="project.img1" alt="img 1">
+                    <p (dblclick)="enterLink(project.link)" class="hover" >{{project.name}}</p>
+                   </div>
+                   <div *ngIf="screenWidth > 1024"  [class.active]="activeDiv1" class="div1">
+                    <img [src]="project.img1" alt="img 1">
+                    <a [href]="project.link"><p (dblclick)="enterLink(project.link)" class="hover" >{{project.name}}</p></a>
                    </div>
                    
                    <div class="div4">
@@ -22,10 +26,14 @@
                     <div class="div3">
                      <img [src]="project.img3" alt="img 3">
                     </div>
-                    <div class="div2">
-                        <a [href]="project.link"><img [src]="project.img2" alt="img 2">
-                        <p class="hover">{{project.description}}</p></a>
+                    <div *ngIf="screenWidth < 1024" (click)="toggleActive2()" [class.active]="activeDiv2" class="div2">
+                       <img [src]="project.img2" alt="img 2">
+                            <p (dblclick)="enterLink(project.link)" class="hover">{{project.description}}</p>
                        </div>
+                       <div *ngIf="screenWidth > 1024" [class.active]="activeDiv2" class="div2">
+                        <img [src]="project.img2" alt="img 2">
+                             <a [href]="project.link"><p (dblclick)="enterLink(project.link)" class="hover">{{project.description}}</p></a>
+                        </div>
             </div>
             </div>
         </div>

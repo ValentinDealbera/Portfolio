@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+
 
 interface Projects {
   name: String,
@@ -7,7 +8,7 @@ interface Projects {
   img2: String,
   img3: String,
   img4: String,
-  link: String
+  link: string
 }
 
 @Component({
@@ -16,6 +17,22 @@ interface Projects {
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
+activeDiv1: Boolean = false
+toggleActive1(): void {
+  this.activeDiv1 = !this.activeDiv1;
+}
+activeDiv2: Boolean = false
+toggleActive2(): void {
+  this.activeDiv2 = !this.activeDiv2;
+}
+  enterLink(link:string): void {
+    window.open(link, '_blank');
+  }
+  screenWidth!: number;
+  @HostListener('window:resize', ['$event'])
+  getScreenWidth(event?: any) {
+    this.screenWidth = window.innerWidth;
+  }
   projects: Projects[] = [
     {
       name: 'BeatConnect',
@@ -69,6 +86,7 @@ export class ProjectsComponent {
     );
   }
   ngOnInit() {
+    this.getScreenWidth();
     this.startInterval();
   }
   startInterval() {

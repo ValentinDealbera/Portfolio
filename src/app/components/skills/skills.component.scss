@@ -19,7 +19,7 @@ $lg-3: 4.5rem;
 
 .main-div {
   width: 100vw;
-  height: calc(100vh - $lg-3 * 1.5 );
+  height: calc(100vh);
   display: flex;
   max-height: 1010px;
   justify-content: center;
@@ -27,7 +27,7 @@ $lg-3: 4.5rem;
 
 .main-frame {
   width: 100vw;
-  height: calc(100vh - ($lg-3 * 1.5));
+  height: calc(100vh);
   max-width: 1536px;
   max-height: 1010px;
   display: flex;

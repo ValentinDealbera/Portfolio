@@ -74,7 +74,6 @@ $lg-3: 4.5rem;
 .skills-div {
   width: 100%;
   max-width: 1536px;
-  // max-height: 750px;
   height: 45vh;
   background-color: $color-oscuro-2;
   border-radius: $md-3;
@@ -136,25 +135,6 @@ $lg-3: 4.5rem;
   position: relative;
   width: 100vw;
   height: 25vh;
-  max-width: 952px;
-  max-height: 360px;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  p {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
   &.active p,
   .div1:hover p,
   .div1.active p{
@@ -172,27 +152,10 @@ $lg-3: 4.5rem;
   }
 }
 .div2 {
-  position: relative;
-  max-width: 952px;
   width: 100vw;
   height: 20vh;
   max-height: 360px;
   overflow: hidden;
-  p {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    text-align: center;
-  }
-  img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-  }
   &.active p,
   .div2:hover p,
   .div2.active p{
@@ -211,25 +174,12 @@ $lg-3: 4.5rem;
 .div3 {
   position: absolute;
 visibility: hidden;
-  width: 30vw;
-  height: 35vh;
-  max-width: 482px;
-  max-height: 349px;
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
+
 }
 .div4 {
   position: absolute;
 visibility: hidden;
-  height: 35vh;
-  max-width: 482px;
-  max-height: 349px;
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
+
 }
 
 .div1,
@@ -240,80 +190,43 @@ visibility: hidden;
   justify-content: center;
 }
 
+//------------------------------------------------------------------------------------------------
+
 @media screen and (min-width: 1024px) {
   .main-div {
     width: 80vw;
     height: 100vh;
-    display: flex;
     max-height: 1420px;
-    justify-content: center;
     min-height: clamp(48.313rem, 12.563rem + 120.833vw, 95.75rem);
   }
   
   .main-frame {
     width: 80vw;
     height: calc(100vh - ($lg-3 * 1.5));
-    max-width: 1536px;
     max-height: 1070px;
-    display: flex;
-    flex-direction: column;
   }
   
   .text-div {
     padding-top: calc($lg-3 * 1.5);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     gap: calc($lg-3 * 2.4);
     p {
       font-size: $lg-1;
-      position: relative;
-      font-weight: 700;
     }
     span {
-      color: $color-primario;
-      font-weight: 900;
       font-size: $lg-2;
     }
     margin-bottom: calc($lg-3 * 2);
   }
   
   .main-text {
-    text-shadow: 5px 5px 10px $color-oscuro-1;
-  
     :before {
-      content: "Projects";
-      position: absolute;
-      color: $font-color-3;
-      top: calc($md-3);
       font-size: calc($lg-3 * 1.2);
       left: -8px;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      text-shadow: none;
     }
   }
   
   .skills-div {
-    width: 100%;
-    max-width: 1536px;
     height: fit-content;
-    // max-height: 750px;
-    background-color: $color-oscuro-2;
-    border-radius: $md-3;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    button {
-      background-color: $color-oscuro-3;
-      border: 1px solid $color-oscuro-3;
-      color: $color-terciario;
-      z-index: 30;
-      &:hover {
-        background-color: #404040b4;
-      }
-    }
   }
   
   .carrousel-div {
@@ -322,7 +235,6 @@ visibility: hidden;
 
   
   .div1 {
-    position: relative;
     width: 45vw;
     height: 35vh;
     max-width: 952px;
@@ -366,23 +278,6 @@ visibility: hidden;
     max-width: 952px;
     width: 45vw;
     height: 35vh;
-    max-height: 360px;
-    overflow: hidden;
-    p {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      text-align: center;
-    }
-    img {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-    }
     &:hover {
       p, p:visited {
         padding:  0 $md-3;

@@ -14,7 +14,8 @@ $lg-1: 2.5rem;
 $lg-2: 3.5rem;
 $lg-3: 4.5rem;
 
-.main-div, .main-frame {
+.main-div,
+.main-frame {
   width: 100vw;
   height: calc(100vh);
   display: flex;
@@ -91,7 +92,7 @@ $lg-3: 4.5rem;
 }
 
 .carrousel-div {
-  width: calc(100vw - 40px);
+  width: calc(90vw + 2px);
 }
 
 .grid-slot {
@@ -124,17 +125,17 @@ $lg-3: 4.5rem;
 
 .div1 {
   position: relative;
-  width: 100vw;
+  width: 99vw;
   height: 25vh;
-    overflow: hidden;
-    img {
+  overflow: hidden;
+  img {
     width: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
   }
-  p, a {
+  p {
     display: none;
     position: absolute;
     top: 0;
@@ -142,34 +143,39 @@ $lg-3: 4.5rem;
     height: 100%;
     width: 100%;
   }
+  a,
+  a:visited {
+    text-decoration: none;
+    color: $color-oscuro-1;
+  }
   &.active p,
-  .div1.active p, a, a:visited{
-      text-decoration: none;
-      color: #050505;
-      font-size: $lg-2;
-      font-weight: 900;
-      line-height: $md-3;
-      display: flex;
-      letter-spacing: $sm-1;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(251, 191, 36, 0.60);
-      backdrop-filter: blur(5px);
+  .div1.active p {
+    text-decoration: none;
+    color: #050505;
+    font-size: $lg-2;
+    font-weight: 900;
+    line-height: $md-3;
+    display: flex;
+    letter-spacing: $sm-1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(251, 191, 36, 0.6);
+    backdrop-filter: blur(5px);
   }
 }
 .div2 {
-  width: 100vw;
+  width: 99vw;
   height: 20vh;
   overflow: hidden;
   position: relative;
   img {
-    width: 100vw;
+    width: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
   }
-  p, a {
+  p {
     display: none;
     position: absolute;
     height: 100%;
@@ -177,35 +183,37 @@ $lg-3: 4.5rem;
     top: 0;
     left: 0;
   }
+  a,
+  a:visited {
+    text-decoration: none;
+    color: $color-oscuro-1;
+  }
   &.active p,
-  .div2.active p, a, a:visited{
-      text-decoration: none;
-      color: #050505;
-      font-size: $md-2;
-      font-weight: 700;
-      line-height: $md-2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background-color: rgba(251, 191, 36, 0.60);
-      backdrop-filter: blur(5px);
+  .div2.active p {
+    text-decoration: none;
+    color: #050505;
+    font-size: $md-2;
+    font-weight: 700;
+    line-height: $md-2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(251, 191, 36, 0.6);
+    backdrop-filter: blur(5px);
   }
 }
 .div3 {
-  position: absolute;
-visibility: hidden;
-img{
-  height: 1px;
-}
-
+  visibility: hidden;
+  img {
+    height: 1px;
+  }
 }
 .div4 {
-  position: absolute;
-visibility: hidden;
-img{
-  height: 1px;
-}
+  visibility: hidden;
+  img {
+    height: 1px;
+  }
 }
 
 .div1,
@@ -225,13 +233,13 @@ img{
     max-height: 1420px;
     min-height: clamp(48.313rem, 12.563rem + 120.833vw, 95.75rem);
   }
-  
+
   .main-frame {
     width: 80vw;
     height: calc(100vh - ($lg-3 * 1.5));
     max-height: 1070px;
   }
-  
+
   .text-div {
     padding-top: calc($lg-3 * 1.5);
     gap: calc($lg-3 * 2.4);
@@ -243,19 +251,19 @@ img{
     }
     margin-bottom: calc($lg-3 * 2);
   }
-  
+
   .main-text {
     :before {
       font-size: calc($lg-3 * 1.2);
       left: -8px;
     }
   }
-  
+
   .carrousel-div {
     width: 80vw;
   }
 
-  .skills-div{
+  .skills-div {
     height: fit-content;
   }
 
@@ -265,8 +273,9 @@ img{
     max-width: 952px;
     max-height: 360px;
     &:hover {
-      p, p:visited {
-        padding:  0 $md-3;
+      p,
+      p:visited {
+        padding: 0 $md-3;
         text-decoration: none;
         color: #181818;
         font-size: $lg-2;
@@ -276,7 +285,7 @@ img{
         letter-spacing: $sm-1;
         justify-content: center;
         align-items: center;
-        background-color: rgba(251, 191, 36, 0.60);
+        background-color: rgba(251, 191, 36, 0.6);
         backdrop-filter: blur(5px);
       }
     }
@@ -286,24 +295,24 @@ img{
     width: 45vw;
     height: 35vh;
     &:hover {
-      p, p:visited {
-        padding:  0 $md-3;
+      p,
+      p:visited {
         text-decoration: none;
-        color: #181818;
+        color: #050505;
         font-size: $md-3;
-        font-weight: 500;
+        font-weight: 700;
         line-height: $lg-1;
         display: flex;
-        justify-content: center;
         align-items: center;
-        background-color: rgba(251, 191, 36, 0.60);
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(251, 191, 36, 0.6);
         backdrop-filter: blur(5px);
       }
     }
   }
   .div3 {
     visibility: visible;
-    position: static;
     width: 30vw;
     height: 35vh;
     max-width: 482px;
@@ -315,7 +324,6 @@ img{
   }
   .div4 {
     visibility: visible;
-    position: static;
     width: 30vw;
     height: 35vh;
     max-width: 482px;

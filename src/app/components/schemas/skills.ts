@@ -1,5 +1,6 @@
 export interface Skills {
     name: String,
     image: String,
-    description: String,
+    descriptionEN: String,
+    descriptionES: String
 }

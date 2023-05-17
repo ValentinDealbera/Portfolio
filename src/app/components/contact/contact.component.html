@@ -1,8 +1,10 @@
 <div class="main-div">
   <div class="main-frame">
     <div class="text-div">
-      <p class="main-text"><span>Contact</span> Me</p>
-      <p>Wanna <span>reach</span> to me? Let's <span>connect</span>!</p>
+      <p *ngIf="lenguage !== 'spanish'" class="main-text"><span>Contact</span> Me</p>
+      <p *ngIf="lenguage === 'spanish'" class="main-text"><span>Contactame</span></p>
+      <p *ngIf="lenguage !== 'spanish'" >Wanna <span>reach</span> to me? Let's <span>connect</span>!</p>
+      <p *ngIf="lenguage === 'spanish'" >Quieres <span>hablar</span> conmigo? Escribeme en mis <span>redes</span>!</p>
       <div class="bubbles">
       <div *ngFor="let contact of contacts" class="contact-bubbles-div">
         <a [href]="contact.link" target="_blank">

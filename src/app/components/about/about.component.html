@@ -5,19 +5,19 @@
         </div>
         <div class="text-div">
             <div class="about-div">
-                <p class="about-me">About <span>Me</span></p>
+                <p class="about-me">{{lenguage === 'english' ? 'About' : 'Sobre'}} <span>{{lenguage === 'english' ? 'Me' : 'Mi'}}</span></p>
             </div>
             <div class="info-div">
                 <div class="data-div">
-                    <p>Full Name:</p>
-                    <p>Date of Birth:</p>
-                    <p>City:</p>
-                    <p>Zip Code:</p>
+                    <p>{{lenguage === 'english' ? 'Full Name:' : 'Nombre Completo:'}}</p>
+                    <p>{{lenguage === 'english' ? 'Date of Birth:' : 'Fecha de Nacimiento:'}}</p>
+                    <p>{{lenguage === 'english' ? 'City:' : 'Ciudad:'}}</p>
+                    <p>{{lenguage === 'english' ? 'Zip Code:' : 'Codigo Postal:'}}</p>
                     <p>Email:</p>
                 </div>
                 <div class="data-result-div">
                     <p>Valentin Dealbera</p>
-                    <p>June 10, 1999</p>
+                    <p>{{lenguage === 'english' ? 'June 10, 1999' : '10 de junio, 1999'}}</p>
                     <p>Villa Maria, Cordoba, Argentina</p>
                     <p>5900</p>
                     <p>valentindealbera01@gmail.com</p>

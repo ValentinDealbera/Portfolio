@@ -18,6 +18,7 @@ $lg-2: 3.5rem;
 $lg-3: 4.5rem;
 
 .main-div {
+  min-height: 750px;
   width: 100vw;
   height: calc(80vh);
   display: flex;
@@ -198,8 +199,8 @@ $lg-3: 4.5rem;
   .skills-div {
     width: 80vw;
     max-width: 1536px;
-    height: 50vh;
-    max-height: 350px;
+    height: 60vh;
+    max-height: 450px;
     background-color: $color-oscuro-2;
     border-radius: $md-3;
     position: relative;

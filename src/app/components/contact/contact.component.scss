@@ -29,7 +29,7 @@ $lg-3: 4.5rem;
   height: calc(100vh);
   max-width: 1536px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
 }
 
@@ -40,7 +40,6 @@ $lg-3: 4.5rem;
   justify-content: center;
   gap: calc($lg-3 * 2.4);
   text-align: center;
-  padding-top: 80vh;
   p {
     font-size: $lg-1;
     position: relative;

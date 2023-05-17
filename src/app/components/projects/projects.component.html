@@ -1,8 +1,10 @@
 <div class="main-div">
     <div class="main-frame">
        <div class="text-div">
-        <p class="main-text">My <span>Projects</span></p>
-        <p>Every <span>Experience</span> in the tech world has a <span>Voice</span> and something to <span>Say</span></p>
+        <p *ngIf="lenguage !== 'spanish'" class="main-text">My <span>Projects</span></p>
+        <p *ngIf="lenguage === 'spanish'" class="main-text">Mis <span>Proyectos</span></p>
+        <p *ngIf="lenguage !== 'spanish'" >Every <span>Experience</span> in the tech world has a <span>Voice</span> and something to <span>Say</span></p>
+        <p *ngIf="lenguage === 'spanish'" >Cada <span>Experiencia</span> En el Mundo tech tiene su propia <span>Voz</span> y algo que <span>Decir</span></p>
        </div>
        <div class="skills-div">
         <button (click)="setPage('-')" class="button-left">◄</button>
@@ -28,11 +30,11 @@
                     </div>
                     <div *ngIf="screenWidth < 1024" (click)="toggleActive2()" [class.active]="activeDiv2" class="div2">
                        <img [src]="project.img2" alt="img 2">
-                            <p (dblclick)="enterLink(project.link)" class="hover"><a [href]="project.link">{{project.description}}</a></p>
+                            <p (dblclick)="enterLink(project.link)" class="hover"><a [href]="project.link">{{lenguage === 'english' ? project.descriptionEN : project.descriptionES}}</a></p>
                        </div>
                        <div *ngIf="screenWidth > 1024" [class.active]="activeDiv2" class="div2">
                         <img [src]="project.img2" alt="img 2">
-                             <a [href]="project.link"><p (dblclick)="enterLink(project.link)" class="hover">{{project.description}}</p></a>
+                             <a [href]="project.link"><p (dblclick)="enterLink(project.link)" class="hover">{{lenguage === 'english' ? project.descriptionEN : project.descriptionES}}</p></a>
                         </div>
             </div>
             </div>

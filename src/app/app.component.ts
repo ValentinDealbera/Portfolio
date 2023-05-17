@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  constructor(private route: ActivatedRoute, private router: Router) {}
   title = 'Valentin Dealbera';
   @ViewChild('home') home!: ElementRef;
   @ViewChild('about') about!: ElementRef;
@@ -47,5 +49,24 @@ export class AppComponent {
   dropdown: Boolean = false
   setDropDown():void {
     this.dropdown = !this.dropdown
+  }
+  lenguage!: String
+  ngOnInit() {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {lenguage: 'english'},
+      queryParamsHandling: 'merge'
+    });
+    this.route.queryParams.subscribe(params => {
+      this.lenguage = params['lenguage']
+    });
+  }
+  updateQueryParams() {
+      this.dropdown = false
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {lenguage: this.lenguage === 'spanish' ? 'english' : 'spanish'},
+      queryParamsHandling: 'merge'
+    });
   }
 }

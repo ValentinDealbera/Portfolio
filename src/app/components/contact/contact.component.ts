@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 interface Contact {
   name: String,
   img: String,
@@ -11,6 +12,18 @@ interface Contact {
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  constructor(private route: ActivatedRoute, private router: Router) {}
+  lenguage!: String
+  ngOnInit() {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {lenguage: 'english'},
+      queryParamsHandling: 'merge' // Merge with existing query parameters
+    });
+    this.route.queryParams.subscribe(params => {
+      this.lenguage = params['lenguage'] // or use them as needed
+    });
+  }
   contacts: Contact[] = [
     {name: 'LinkedIn' ,img:'/assets/LinkedIn - Original.png', link:'https://www.linkedin.com/in/valentin-dealbera-b30561262/', text:'Valentin Dealbera'},
     {name: 'GitHub' ,img:'/assets/github.png', link:'https://github.com/ValentinDealbera', text:'ValentinDealbera'},

@@ -4,20 +4,21 @@
       <span class="name-logo-text" (click)="scrollToHome()" >Valentin Dealbera</span>
     </div>
     <div class="nav-buttons-div">
-      <span class="nav-buttons-text" (click)="scrollToHome()">Home</span>
-      <span class="nav-buttons-text" (click)="scrollToAbout()">About me</span>
-      <span class="nav-buttons-text" (click)="scrollToSkills()">Skills</span>
+      <span class="nav-buttons-text" (click)="scrollToHome()">{{lenguage === 'english' ? 'Home' : 'Inicio'}}</span>
+      <span class="nav-buttons-text" (click)="scrollToAbout()">{{lenguage === 'english' ? 'About me' : 'Sobre mi'}}</span>
+      <span class="nav-buttons-text" (click)="scrollToSkills()">{{lenguage === 'english' ? 'Skills' : 'Habilidades'}}</span>
       <span class="nav-buttons-text" (click)="scrollToProjects()"
-        >Projects</span
+        >{{lenguage === 'english' ? 'Projects' : 'Proyectos'}}</span
       >
-      <span class="nav-buttons-text" (click)="scrollToContact()">Contact</span>
+      <span class="nav-buttons-text" (click)="scrollToContact()">{{lenguage === 'english' ? 'Contact' : 'Contacto'}}</span>
+      <span class="nav-buttons-text" (click)="updateQueryParams()" >{{lenguage === 'english' ? 'English' : 'Spanish'}}</span>
     </div>
   </div>
 </div>
 <div class="navbar-responsive">
   <div class="navbar-general-all">
     <div class="name-logo">
-      <span class="name-logo-text" (click)="scrollToHome()" >Valentin Dealbera</span>
+      <span class="name-logo-text">Valentin Dealbera</span>
     </div>
     <div class="responsive-nav">
       <img src="/assets/picklist-type-svgrepo-com.svg" alt="" (click)="setDropDown()"/>
@@ -29,6 +30,7 @@
         >Projects</span
       >
       <span class="nav-buttons-text" (click)="scrollToContact()">Contact</span>
+      <span class="nav-buttons-text" (click)="updateQueryParams()" >{{lenguage}}</span>
     </div>
   </div>
   </div>

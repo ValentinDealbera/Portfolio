@@ -1,8 +1,10 @@
 <div class="main-div">
     <div class="main-frame">
        <div class="text-div">
-        <p class="main-text">Tech <span>Skills</span></p>
-        <p>The <span>Skills</span> I'm honing everyday, and many more to <span>Learn</span></p>
+        <p *ngIf="lenguage !== 'spanish'" class="main-text">Tech <span>Skills</span></p>
+        <p *ngIf="lenguage === 'spanish'" class="main-text"><span>Habilidades</span> Tech</p>
+        <p *ngIf="lenguage !== 'spanish'" >The <span>Skills</span> I'm honing everyday, and many more to <span>Learn</span></p>
+        <p *ngIf="lenguage === 'spanish'" >Las <span>Habilidades</span> que entreno todos los dias, aun muchas mas por <span>Aprender</span></p>
        </div>
        <div class="skills-div">
         <button (click)="setPage('-')" class="button-left">◄</button>
@@ -11,7 +13,7 @@
                     <div class="grid-slot-div">
                    <p class="title"><img class="grid-img" src="{{skill.image}}" alt="{{skill.name}}"> {{skill.name}}</p>
                 </div>
-                   <p class="description" #description>{{skill.description}}</p>
+                   <p class="description" #description>{{lenguage === 'english' ? skill.descriptionEN : skill.descriptionES}}</p>
             </div>
         </div>
         <button (click)="setPage('+')" class="button-right">►</button>

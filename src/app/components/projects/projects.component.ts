@@ -67,6 +67,8 @@ toggleActive2(): void {
   totalPages: Number = Math.ceil(this.projects.length / Number(this.skillsToShow))
   showSkills: Projects[] = this.projects.slice((Number(this.page) - 1), Number(this.skillsToShow))
   setPage(todo: string) {
+    this.activeDiv1 = false
+    this.activeDiv2 = false
     if (todo === '+') {
       if (Number(this.page) + 1 > Number(this.totalPages)) {
         this.page = 1;
